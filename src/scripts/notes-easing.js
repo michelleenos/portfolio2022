@@ -24,12 +24,17 @@ const ease = {
 		return -(Math.cos(Math.PI * x) - 1) / 2
 	},
 
+	inQuad: function (x) {
+		return x * x
+	},
 	inCubic: function (x) {
 		return x * x * x
 	},
-
-	inQuad: function (x) {
-		return x * x
+	inQuart: function (x) {
+		return x * x * x * x
+	},
+	inQuint: function (x) {
+		return x * x * x * x * x
 	},
 
 	inOutQuad: function (x) {
@@ -38,6 +43,9 @@ const ease = {
 
 	inExpo: function (x) {
 		return x === 0 ? 0 : Math.pow(2, 10 * x - 10)
+	},
+	inCirc: function (x) {
+		return 1 - Math.sqrt(1 - x * x)
 	},
 
 	outExpo: function (x) {
@@ -52,6 +60,15 @@ const ease = {
 			: x < 0.5
 			? Math.pow(2, 20 * x - 10) / 2
 			: (2 - Math.pow(2, -20 * x + 10)) / 2
+	},
+
+	inOutCirc: function (x) {
+		return x < 0.5
+			? (1 - Math.sqrt(1 - Math.pow(2 * x, 2))) / 2
+			: (Math.sqrt(1 - Math.pow(-2 * x + 2, 2)) + 1) / 2
+	},
+	inOutQuart: function (x) {
+		return x < 0.5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2
 	},
 
 	inQuadCyc: function (p) {
@@ -87,6 +104,22 @@ const OPTS = [
 		fn: (p) => Math.abs(ease.inCubic(p * 2 - 1)),
 	},
 	{
+		title: 'abs(easeInQuart(p * 2 - 1)',
+		id: 'quartAdjust',
+		fn: (p) => Math.abs(ease.inQuart(p * 2 - 1)),
+	},
+	{
+		title: 'abs(easeInQuint(p * 2 - 1))',
+		id: 'quintAdjust',
+		fn: (p) => Math.abs(ease.inQuint(p * 2 - 1)),
+	},
+	{
+		title: 'abs(easeInCirc(p * 2 - 1))',
+		id: 'circAdjust',
+		fn: (p) => Math.abs(ease.inCirc(p * 2 - 1)),
+	},
+
+	{
 		title: 'easeInQuadCyc',
 		id: 'easeInQuadCyc',
 		fn: (p) => ease.inQuadCyc(p),
@@ -116,6 +149,16 @@ const OPTS = [
 		title: 'inOutSine(sin(p * PI))',
 		id: 'inOutSineAngle',
 		fn: (p) => ease.inOutSine(Math.sin(p * Math.PI)),
+	},
+	{
+		title: 'inOutExpo(sin(p * PI))',
+		id: 'inOutExpoAngle',
+		fn: (p) => ease.inOutExpo(Math.sin(p * Math.PI)),
+	},
+	{
+		title: 'inOutQuart(sin(p * PI))',
+		id: 'inOutQuartAngle',
+		fn: (p) => ease.inOutQuart(Math.sin(p * Math.PI)),
 	},
 	{
 		title: 'easeInCubic(sin(p * PI))',
