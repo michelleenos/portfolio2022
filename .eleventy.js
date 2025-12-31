@@ -1,5 +1,4 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const faviconPlugin = require('eleventy-favicon')
 const { imageShortcode } = require('./build/image-shortcode')
 const collections = require('./build/collections')
 const filters = require('./build/filters')
@@ -26,7 +25,6 @@ module.exports = function (eleventyConfig) {
 	)
 
 	eleventyConfig.addPlugin(syntaxHighlight)
-	eleventyConfig.addPlugin(faviconPlugin)
 
 	eleventyConfig.setServerPassthroughCopyBehavior('passthrough')
 
