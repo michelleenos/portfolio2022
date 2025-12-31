@@ -1,4 +1,5 @@
 [[headers]]
-  for = "/*"
+  for = "/images/Fox.glb"
   [headers.values]
-	access-control-allow-origin = "*"
+  Access-Control-Allow-Origin = "*"
+  Cross-Origin-Resource-Policy = "cross-origin"
