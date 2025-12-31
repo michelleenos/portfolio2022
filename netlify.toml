@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/images/Fox.glb"
+  [headers.values]
+	access-control-allow-origin = "*"
