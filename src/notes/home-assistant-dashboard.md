@@ -4,7 +4,7 @@ date: 2026-04-01
 layout: post.njk
 tags: ['home assistant', 'lineageos']
 excerpt: ''
-img: '/images/fully-screenshot.jpeg'
+img: '/images/ha-tablet-dashboard.jpeg'
 imgAlt: 'home assistant dashboard showing controls for 3-4 lights, temperature guages, and buttons'
 order: 300
 ---
