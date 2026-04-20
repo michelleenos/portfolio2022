@@ -17,11 +17,18 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
 
+	eleventyConfig.addNunjucksShortcode('imgCaption', function ({ src, alt, caption }) {
+		return `<figure>
+		<img src="${src}" alt="${alt}" />
+		<figcaption>${caption}</figcaption>
+		</figure>`
+	})
+
 	eleventyConfig.addNunjucksShortcode(
 		'imgStyle',
 		function (src, alt, style = '', className = '') {
 			return `<img src="${src}" alt="${alt}" style="${style}" />`
-		}
+		},
 	)
 
 	eleventyConfig.addPlugin(syntaxHighlight)

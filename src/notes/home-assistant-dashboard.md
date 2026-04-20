@@ -13,8 +13,7 @@ My house is set up with [Home Assistant](https://www.home-assistant.io/), an ope
 
 I had an old Samsung Galaxy tablet (circa 2013!) laying around that was too old to do much with and definitely not getting android updates anymore. I decided to try to repurpose it for use as a wall-mounted Home Assistant dashboard, which required flashing it with LineageOS to replace the existing Android software. Here are some notes on that process!
 
-![tablet device mounted on a wall; there is a glare on the screen but you can see some of a home assistant dashboard on it.](/images/ha-tablet-wall.jpeg)
-a glary photo of the final product {caption}
+{% imgCaption src="/images/ha-tablet-wall.jpeg", alt="tablet device mounted on a wall; there is a glare on the screen but you can see some of a home assistant dashboard on it.", caption="a glare-y photo of the final result" %}
 
 ## Tools used
 
@@ -64,8 +63,7 @@ I downloaded LineageOS and TWRP to my computer so that I could get them onto the
 
 ## Home Assistant Tools/Setup
 
-![home assistant dashboard showing controls for 3-4 lights, temperature guages, and buttons](/images/ha-tablet-dashboard.jpeg)
-the HA dashboard I'm using on the tablet at the moment {caption}
+{% imgCaption src="/images/ha-tablet-dashboard.jpeg", alt="home assistant dashboard showing controls for 3-4 lights, temperature guages, and buttons", caption="the HA dashboard I'm using on the tablet at the moment " %}
 
 - I'm using this [Fully Kiosk app](https://www.fully-kiosk.com/) to lock the tablet to the URL of the dashboard I built for it.
     - Note on installation: To install an app without google apps / playstore set up, need to configure LineageOS settings to allow packages from unknown sources: _Security → Unknown sources_. Then download apk file.
