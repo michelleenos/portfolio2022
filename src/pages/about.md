@@ -17,12 +17,12 @@ While I don't teach for a living anymore, my teaching background manifests in my
 
 ### things i use
 
-- HTML/CSS
 - TypeScript/JavaScript
 - Node.js
-- PHP
 - Vue
 - React
+- PHP
+- good old HTML & CSS
 - Sass/SCSS
 - p5.js
 - WebGL (ThreeJS, GLSL)
