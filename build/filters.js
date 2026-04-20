@@ -14,6 +14,12 @@ let filters = [
 		},
 	},
 	{
+		name: 'keys',
+		fn: function (value) {
+			return Object.keys(value)
+		},
+	},
+	{
 		name: 'round',
 		fn: function (val, pos = 2) {
 			return Math.round(val * 10 * pos) / (10 * pos)
